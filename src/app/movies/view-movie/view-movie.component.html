@@ -1,0 +1,45 @@
+<div class="container">
+  <h2>Movies</h2>
+
+  <!-- <div class="form-group">
+        <label>Search People</label>
+        <input
+          type="text"
+          class="form-control mb-4"
+          placeholder="Search"
+          [(ngModel)]="data"
+          id="listSearch"
+        />
+      </div>
+
+      <div class="d-grid gap-2 d-md-block" style="line-height: 50px">
+        <a class="btn btn-primary btn-sm" [routerLink]="'/account/create'"
+          >Create</a
+        >
+      </div> -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        *ngFor="let movie of movies; index as i; let even = even; let odd = odd"
+      >
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ movie.title }}</td>
+
+        <button
+          class="btn btn-primary"
+          title="edit account"
+          [routerLink]="movie.id"
+        >
+          View
+        </button>
+      </tr>
+    </tbody>
+  </table>
+</div>

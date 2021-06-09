@@ -1,0 +1,51 @@
+<div class="container">
+  <h2>Person Details</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Height</th>
+        <th scope="col">Mass</th>
+        <th scope="col">Hair Color</th>
+        <th scope="col">Skin Color</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Birth Year</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        [ngClass]="{
+          odd: odd,
+          even: even,
+
+          'table-danger': account.deactivated_at != null
+        }"
+      >
+        <th scope="row">{{ person.id }}</th>
+        <td>{{ person.name }}</td>
+        <td>{{ person.height }}</td>
+        <td>{{ person.mass }}</td>
+        <td>{{ person.hair }}</td>
+        <td>{{ person.skin_color }}</td>
+        <td>{{ person.gender }}</td>
+        <td>{{ person.dob }}</td>
+        <button
+          class="btn btn-primary"
+          title="edit account"
+          [routerLink]="account.id"
+        >
+          Back
+        </button>
+        <!-- <button
+            class="btn btn-danger"
+            title="delete account"
+            (click)="deleteAccount(account.id)"
+          >
+            x
+          </button> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

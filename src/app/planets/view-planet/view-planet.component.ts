@@ -1,3 +1,4 @@
+import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { PlanetService } from 'src/app/services/planet.service';
 
@@ -14,8 +15,8 @@ export class ViewPlanetComponent implements OnInit {
 
   ngOnInit(): void {
     this.planetService.GetRequest().subscribe(
-      (response) => {
-        this.planets = response.results;
+      (response: HttpResponse<any>) => {
+        this.planets = response?.body.results;
         console.log(response);
       },
       (error) => {

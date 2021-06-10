@@ -1,3 +1,4 @@
+import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from 'src/app/services/movie.service';
 
@@ -14,8 +15,8 @@ export class ViewMovieComponent implements OnInit {
 
   ngOnInit(): void {
     this.movieService.GetRequest().subscribe(
-      (response) => {
-        this.movies = response.results;
+      (response: HttpResponse<any>) => {
+        this.movies = response?.body.results;
         console.log(response);
       },
       (error) => {

@@ -100,3 +100,16 @@ a {
   width: 100% !important;
   height: 80%;
 }
+
+.mat-progress-spinner {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+
+.mat-header-cell {
+  font-size: 18px;
+  font-weight: 500;
+}

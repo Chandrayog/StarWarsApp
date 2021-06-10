@@ -8,7 +8,7 @@
       <div fxLayout="row" fxLayoutAlign="center center" class="content">
         <mat-card class="card">
           <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-            <h3>List of Movies</h3>
+            <h2>List of Movies</h2>
           </mat-card-title>
           <mat-card-content>
             <div class="example-container mat-elevation-z8">
@@ -22,26 +22,20 @@
                 >
                 </mat-row>
                 <ng-container matColumnDef="index">
-                  <mat-header-cell *matHeaderCellDef class="h4">
-                    No.
-                  </mat-header-cell>
+                  <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
                   <mat-cell *matCellDef="let element; let i = index">
                     {{ i + 1 }}
                   </mat-cell>
                 </ng-container>
                 <ng-container matColumnDef="title">
-                  <mat-header-cell *matHeaderCellDef class="h4">
-                    Movies
-                  </mat-header-cell>
+                  <mat-header-cell *matHeaderCellDef> Movies </mat-header-cell>
                   <mat-cell *matCellDef="let element">
                     {{ element.title }}</mat-cell
                   >
                 </ng-container>
 
                 <ng-container matColumnDef="view">
-                  <mat-header-cell *matHeaderCellDef class="h4">
-                    View</mat-header-cell
-                  >
+                  <mat-header-cell *matHeaderCellDef> View</mat-header-cell>
                   <mat-cell *matCellDef="let element">
                     <a type="button">
                       <mat-icon class="icon">visibility</mat-icon>

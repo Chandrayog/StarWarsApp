@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "starwarsapp-43b24": {
+      "hosting": {
+        "StarWarsApp": [
+          "starwarsapp-43b24"
+        ]
+      }
+    }
+  }
+}

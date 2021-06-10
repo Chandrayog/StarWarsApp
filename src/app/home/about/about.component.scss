@@ -1,0 +1,33 @@
+.container {
+  max-width: 50%;
+  max-height: 20%;
+}
+
+.img {
+  object-fit: cover;
+  width: 100% !important;
+  height: 20%;
+}
+mat-card-subtitle {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+a {
+  color: lightskyblue;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}

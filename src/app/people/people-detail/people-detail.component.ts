@@ -1,7 +1,5 @@
 import { HttpResponse } from '@angular/common/http';
-import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
+import { Component, OnInit } from '@angular/core';
 import { PeopleService } from 'src/app/services/people.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -47,43 +45,10 @@ export class PeopleDetailComponent implements OnInit {
       () => {
         this.loading = false;
         console.log('completed');
-        //this.router.navigateByUrl('/people/view');
       }
     );
   }
   navigateToProfile(id: string) {
     this.router.navigate(['./' + id], { relativeTo: this.activatedRoute });
   }
-  // this.peopleService.GetRequest().subscribe((response: any) => {
-  //   this.people = response;
-  // });
-
-  //   @ViewChild(MatPaginator) paginator: MatPaginator;
-
-  //   ngAfterViewInit() {
-  //     this.dataSource.paginator = this.paginator;
-  //   }
-  //     this.peopleService.GetRequest().subscribe(
-  //       (response) => {
-  //        // this.people = response.results;
-  //         this.dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  //         console.log(response);
-  //       },
-  //       (error) => {
-  //         console.log('error: ');
-  //         console.log(error);
-  //         this.loading = false;
-  //       },
-  //       () => {
-  //         this.loading = false;
-  //         console.log('completed');
-  //         //this.router.navigateByUrl('/people/view');
-  //       }
-  //     );
-  //   }
-  //   GetDetails = function (index) {
-  //     var name = $scope.Customers[index].Name;
-  //     var country = $scope.Customers[index].Country;
-  //     $window.alert("Name: " + name + "\nCountry: " + country);
-  // };
 }

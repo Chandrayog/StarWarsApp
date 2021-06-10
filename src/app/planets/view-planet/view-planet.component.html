@@ -1,50 +1,64 @@
-<!-- <div class="container">
-  <h2>Planets</h2>
+<div>
+  <br />
+  <div class="container">
+    <div class="spinner-container spin">
+      <mat-spinner *ngIf="dataSource.length === 0"></mat-spinner>
+    </div>
+    <div class="container">
+      <div fxLayout="row" fxLayoutAlign="center center" class="content">
+        <mat-card class="card">
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <h3>List of Planets</h3>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="example-container mat-elevation-z8">
+              <mat-table #table [dataSource]="data">
+                <mat-header-row
+                  *matHeaderRowDef="displayedColumns"
+                ></mat-header-row>
+                <mat-row
+                  *matRowDef="let row; columns: displayedColumns"
+                  (click)="onRowClicked(row)"
+                >
+                </mat-row>
+                <ng-container matColumnDef="index">
+                  <mat-header-cell *matHeaderCellDef class="h4">
+                    No.
+                  </mat-header-cell>
+                  <mat-cell *matCellDef="let element; let i = index">
+                    {{ i + 1 }}
+                  </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="name">
+                  <mat-header-cell *matHeaderCellDef class="h4">
+                    Planets
+                  </mat-header-cell>
+                  <mat-cell *matCellDef="let element">
+                    {{ element.name }}</mat-cell
+                  >
+                </ng-container>
 
-   <div class="form-group">
-          <label>Search People</label>
-          <input
-            type="text"
-            class="form-control mb-4"
-            placeholder="Search"
-            [(ngModel)]="data"
-            id="listSearch"
-          />
-        </div>
-
-        <div class="d-grid gap-2 d-md-block" style="line-height: 50px">
-          <a class="btn btn-primary btn-sm" [routerLink]="'/account/create'"
-            >Create</a
-          >
-        </div>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr
-        *ngFor="
-          let planet of planets;
-          index as i;
-          let even = even;
-          let odd = odd
-        "
-      >
-        <th scope="row">{{ i + 1 }}</th>
-        <td>{{ planet.name }}</td>
-
-        <button
-          class="btn btn-primary"
-          title="edit account"
-          [routerLink]="planet.id"
-        >
-          View
-        </button>
-      </tr>
-    </tbody>
-  </table>
-</div> -->
+                <ng-container matColumnDef="view">
+                  <mat-header-cell *matHeaderCellDef class="h4">
+                    View
+                  </mat-header-cell>
+                  <mat-cell *matCellDef="let element">
+                    <a type="button">
+                      <mat-icon class="icon">visibility</mat-icon>
+                    </a>
+                  </mat-cell>
+                </ng-container>
+              </mat-table>
+              <mat-paginator
+                #paginator
+                [length]="this.dataSource.length"
+                [pageSizeOptions]="[5, 10, 15]"
+                showFirstLastButtons
+              ></mat-paginator>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

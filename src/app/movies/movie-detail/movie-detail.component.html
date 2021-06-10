@@ -1,1 +1,95 @@
-<p>movie-detail works!</p>
+<div>
+  <br />
+  <div class="container">
+    <br />
+    <div class="container">
+      <div
+        fxLayout="column"
+        fxLayoutGap="20px"
+        fxLayout.gt-md="row"
+        fxLayoutAlign="space-around center"
+        class="content"
+      >
+        <div class="blocks">
+          <button
+            button="submit"
+            mat-raised-button
+            color="primary"
+            routerLink="/movies/view"
+          >
+            Back
+          </button>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" class="content">
+        <mat-card class="card">
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <div style="color: black"><h1>Movie Detail</h1></div>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Title</span
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="default"
+                [value]="dataSource.title"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Director</span
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="default"
+                [value]="dataSource.director"
+                required
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Producers</span
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="default"
+                [value]="dataSource.producer"
+                required
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Release Date</span
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="default"
+                [value]="dataSource.release_date"
+                required
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

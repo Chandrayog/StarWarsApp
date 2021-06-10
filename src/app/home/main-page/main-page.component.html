@@ -1,8 +1,50 @@
 <div class="container">
-  <h2>List of People</h2>
-  <div>
-    <button mat-button routerLink="/people/view">People</button>
-    <button mat-button routerLink="/planets/view">Planets</button>
-    <button mat-button routerLink="/movies/view">Movies</button>
+  <div class="content">
+    <mat-card class="home-card">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <button mat-button routerLink="/people/view">People</button>
+          </mat-card-title>
+          <mat-card-subtitle>List of Star Wars Characters</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          class="img"
+          src="./assets/images/image4.jpeg"
+          alt="image"
+        />
+      </mat-card>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <button mat-button routerLink="/planets/view">Planets</button>
+          </mat-card-title>
+          <mat-card-subtitle>List Star Wars Planets</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          class="img"
+          src="./assets/images/image6.jpeg"
+          alt="image"
+        />
+      </mat-card>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <button mat-button routerLink="/movies/view">Movies</button>
+          </mat-card-title>
+          <mat-card-subtitle>List of Star Wars Movies</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          class="img"
+          src="./assets/images/image5.jpeg"
+          alt="image"
+        />
+      </mat-card>
+    </mat-card>
   </div>
 </div>

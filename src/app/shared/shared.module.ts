@@ -40,9 +40,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
-  declarations: [],
+  declarations: [SearchPipe],
   imports: [
     CommonModule,
     RouterModule,
@@ -117,6 +118,7 @@ import { MatTreeModule } from '@angular/material/tree';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    SearchPipe,
   ],
 })
 export class SharedModule {}

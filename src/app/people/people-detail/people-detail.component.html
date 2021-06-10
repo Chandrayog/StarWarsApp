@@ -1,228 +1,138 @@
-<!-- <div>
-  <mat-toolbar color="blue">
-    <span class="fill-remaining-space">Person Detail</span>
-  </mat-toolbar>
-</div>
-<div class="container">
-  <form class="form">
-    <mat-form-field class="form-element">
-      <mat-label> Name: </mat-label>
-      <input
-        matInput
-        name="name"
-        type="text"
-        placeholder="Name of Person"
-        [value]="dataSource.name"
-        required
-      />
-    </mat-form-field>
-
-    <mat-form-field class="form-element">
-      <mat-label>Height</mat-label>
-      <input
-        matInput
-        name="height"
-        type="text"
-        placeholder="Height"
-        [value]="dataSource.height"
-        required
-      />
-    </mat-form-field>
-    <mat-form-field class="form-element">
-      <mat-label>Mass</mat-label>
-      <input
-        matInput
-        name="mass"
-        type="text"
-        placeholder="Mass"
-        [value]="dataSource.mass"
-        required
-      />
-    </mat-form-field>
-
-    <mat-form-field class="form-element">
-      <mat-label>Hair Color</mat-label>
-      <input
-        matInput
-        name="hair_color"
-        type="text"
-        placeholder="Hair Color"
-        [value]="dataSource.hair_color"
-        required
-      />
-    </mat-form-field>
-    <mat-form-field class="form-element">
-      <mat-label>Skin Color</mat-label>
-      <input
-        matInput
-        name="skin_color"
-        type="text"
-        placeholder="Skin Color"
-        [value]="dataSource.skin_color"
-        required
-      />
-      <mat-hint>Name of the person</mat-hint>
-    </mat-form-field>
-    <mat-form-field class="form-element">
-      <mat-label>Gender</mat-label>
-      <input
-        matInput
-        name="gender"
-        type="text"
-        placeholder="Gender"
-        [value]="dataSource.gender"
-        required
-      />
-    </mat-form-field>
-
-    <mat-form-field class="form-element">
-      <mat-label>Birth Year</mat-label>
-      <input
-        matInput
-        name="birth_year"
-        type="text"
-        placeholder="Birth Year"
-        [value]="dataSource.birth_year"
-        required
-      />
-    </mat-form-field>
-  </form>
-</div> -->
 <div>
   <br />
   <div class="container">
-    <!-- <div class="container">
-          <div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row"  fxLayoutAlign="space-around center" class="content">
-              <div class="blocks">
-                  <button button="submit" mat-raised-button color="primary">
-                      <mat-icon>add</mat-icon> Add Post
-                  </button>
-              </div>
-        </div>
-    </div> -->
     <br />
     <div class="container">
+      <div
+        fxLayout="column"
+        fxLayoutGap="20px"
+        fxLayout.gt-md="row"
+        fxLayoutAlign="space-around center"
+        class="content"
+      >
+        <div class="blocks">
+          <button
+            button="submit"
+            mat-raised-button
+            color="primary"
+            routerLink="/people/view"
+          >
+            Back
+          </button>
+        </div>
+      </div>
       <div fxLayout="row" fxLayoutAlign="center center" class="content">
-        <!-- <mat-card class="card">
+        <mat-card class="card">
           <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-            <h3>Person Detail</h3>
-          </mat-card-title> -->
-        <!-- <mat-card-content> -->
-
-        <div class="example-container mat-elevation-z8">
-          <form class="form">
-            <mat-form-field class="form-element">
-              <label> Name: </label>
+            <div style="color: black"><h1>Person Detail</h1></div>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Name</span
+                >
+              </div>
               <input
-                matInput
                 type="text"
-                placeholder="Name of Person"
+                class="form-control"
+                aria-label="default"
                 [value]="dataSource.name"
-                required
+                aria-describedby="inputGroup-sizing-default"
               />
-            </mat-form-field>
-            <mat-form-field class="form-element">
-              <label>Height</label>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Height</span
+                >
+              </div>
               <input
-                matInput
-                name="height"
                 type="text"
-                placeholder="Height"
+                class="form-control"
+                aria-label="default"
                 [value]="dataSource.height"
                 required
+                aria-describedby="inputGroup-sizing-default"
               />
-            </mat-form-field>
-            <mat-form-field class="form-element">
-              <label>Mass</label>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Mass</span
+                >
+              </div>
               <input
-                matInput
-                name="mass"
                 type="text"
-                placeholder="Mass"
+                class="form-control"
+                aria-label="default"
                 [value]="dataSource.mass"
                 required
+                aria-describedby="inputGroup-sizing-default"
               />
-            </mat-form-field>
-
-            <mat-form-field class="form-element">
-              <label>Hair Color</label>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Hair Color</span
+                >
+              </div>
               <input
-                matInput
-                name="hair_color"
                 type="text"
-                placeholder="Hair Color"
+                class="form-control"
+                aria-label="default"
                 [value]="dataSource.hair_color"
                 required
+                aria-describedby="inputGroup-sizing-default"
               />
-            </mat-form-field>
-            <mat-form-field class="form-element">
-              <label>Skin Color</label>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Skin Color</span
+                >
+              </div>
               <input
-                matInput
-                name="skin_color"
                 type="text"
-                placeholder="Skin Color"
+                class="form-control"
+                aria-label="default"
                 [value]="dataSource.skin_color"
                 required
+                aria-describedby="inputGroup-sizing-default"
               />
-              <mat-hint>Name of the person</mat-hint>
-            </mat-form-field>
-            <mat-form-field class="form-element">
-              <label>Gender</label>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Gender</span
+                >
+              </div>
               <input
-                matInput
-                name="gender"
                 type="text"
-                placeholder="Gender"
+                class="form-control"
+                aria-label="default"
                 [value]="dataSource.gender"
                 required
+                aria-describedby="inputGroup-sizing-default"
               />
-            </mat-form-field>
-
-            <mat-form-field class="form-element">
-              <label>Birth Year</label>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >Birth Year</span
+                >
+              </div>
               <input
-                matInput
-                name="birth_year"
                 type="text"
-                placeholder="Birth Year"
+                class="form-control"
+                aria-label="default"
                 [value]="dataSource.birth_year"
                 required
+                aria-describedby="inputGroup-sizing-default"
               />
-            </mat-form-field>
-            <!-- <ng-container matColumnDef="title">
-                  <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
-                  <mat-cell *matCellDef="let element">
-                    {{ element.title }}
-                  </mat-cell>
-                </ng-container>
-                <ng-container matColumnDef="category">
-                  <mat-header-cell *matHeaderCellDef>
-                    Category
-                  </mat-header-cell>
-                  <mat-cell *matCellDef="let element">
-                    {{ element.category }}
-                  </mat-cell>
-                </ng-container>
-                <ng-container matColumnDef="delete">
-                  <mat-header-cell *matHeaderCellDef></mat-header-cell>
-                  <mat-cell *matCellDef="let element">
-                    <a type="button">
-                      <mat-icon class="icon">delete</mat-icon>
-                    </a>
-                  </mat-cell>
-                </ng-container>
-                <mat-header-row
-                  *matHeaderRowDef="displayedColumns"
-                ></mat-header-row>
-                <mat-row
-                  *matRowDef="let row; columns: displayedColumns"
-                ></mat-row>
-              </mat-table> -->
-          </form>
-        </div>
-        <!-- </mat-card-content> -->
-        <!-- </mat-card> -->
+            </div>
+          </mat-card-content>
+        </mat-card>
       </div>
     </div>
   </div>

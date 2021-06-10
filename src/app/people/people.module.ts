@@ -5,6 +5,7 @@ import { ViewPeopleComponent } from './view-people/view-people.component';
 import { PeopleDetailComponent } from './people-detail/people-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ViewPeopleComponent, PeopleDetailComponent],
@@ -12,6 +13,7 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     PeopleRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     SharedModule,
   ],
 })

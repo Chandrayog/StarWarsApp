@@ -7,6 +7,8 @@
 html,
 body {
   height: 100%;
+  background-image: url("./assets/images/image2.jpeg");
+  background-size: cover;
 }
 body {
   margin: 0;
@@ -59,6 +61,7 @@ a:active {
 
 .card {
   min-width: 80%;
+  background-color: #17a2b8 !important;
 }
 
 .example-container {
@@ -82,4 +85,18 @@ a {
   align-self: center;
   left: 50%;
   margin-left: -4em;
+}
+
+.home-card {
+  max-width: 100%;
+  align-content: center;
+  display: inline-flex !important;
+}
+.content {
+  padding: 16px;
+}
+.img {
+  object-fit: cover;
+  width: 100% !important;
+  height: 80%;
 }

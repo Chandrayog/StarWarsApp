@@ -1,12 +1,8 @@
-.container {
-  max-width: 50%;
-  max-height: 20%;
-}
-
 .img {
   object-fit: cover;
   width: 100% !important;
-  height: 20%;
+  height: auto;
+  margin: 0 auto;
 }
 mat-card-subtitle {
   font-weight: bold;

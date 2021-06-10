@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
+## Clone the repository on local
+
+First clone the repository to local folder using git clone command and copy the link from the repository.
+
+## Install Dependencies
+
+Open the the folder in VS code and run `npm install` to install all the required dependencies of the project.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

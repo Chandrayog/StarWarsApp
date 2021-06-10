@@ -25,6 +25,10 @@ mat-sidenav {
   width: 250px;
 }
 
+.mat-card {
+  background: rgba(0, 0, 0, 0.4);
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -62,6 +66,7 @@ a:active {
 .card {
   min-width: 80%;
   background-color: #17a2b8 !important;
+  opacity: 0.8;
 }
 
 .example-container {

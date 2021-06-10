@@ -95,7 +95,9 @@ a {
 .home-card {
   max-width: 100%;
   align-content: center;
-  display: inline-flex !important;
+  display: flex !important;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .content {
   padding: 16px;
@@ -117,4 +119,10 @@ a {
 .mat-header-cell {
   font-size: 18px;
   font-weight: 500;
+}
+
+.mat-card-child {
+  display: inline-block !important;
+  width: 348px;
+  margin: 0 auto;
 }

@@ -26,13 +26,16 @@ export class PeopleService {
   // function for get request to get people
   public GetRequest() {
     return this.httpClient
-      .get(this.REST_API, { observe: 'response' })
+      .get(this.REST_API, { observe: 'response', withCredentials: false })
       .pipe(retry(3), catchError(this.handleError));
   }
   //function for get people details with ID
   public GetRequestwithID(personID: string) {
     return this.httpClient
-      .get(this.REST_API + personID, { observe: 'response' })
+      .get(this.REST_API + personID + '/', {
+        observe: 'response',
+        withCredentials: false,
+      })
       .pipe(retry(3), catchError(this.handleError));
   }
 }

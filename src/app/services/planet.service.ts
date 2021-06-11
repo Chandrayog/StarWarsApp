@@ -32,7 +32,7 @@ export class PlanetService {
   //function for get planet details with ID
   public GetRequestwithID(planetID: string) {
     return this.httpClient
-      .get(this.REST_API + planetID, { observe: 'response' })
+      .get(this.REST_API + planetID + '/', { observe: 'response' })
       .pipe(retry(3), catchError(this.handleError));
   }
 }

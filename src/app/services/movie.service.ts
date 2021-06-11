@@ -32,7 +32,7 @@ export class MovieService {
   //function for get movie details with ID
   public GetRequestwithID(personID: string) {
     return this.httpClient
-      .get(this.REST_API + personID, { observe: 'response' })
+      .get(this.REST_API + personID + '/', { observe: 'response' })
       .pipe(retry(3), catchError(this.handleError));
   }
 }

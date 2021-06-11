@@ -11,7 +11,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class PeopleDetailComponent implements OnInit {
   submitted = false;
   loading = false;
-  people = [];
   dataSource: any;
   id: string = '';
   displayedColumns: string[] = [

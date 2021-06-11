@@ -1,7 +1,10 @@
 <div>
   <br />
   <div class="container">
-    <br />
+    <div class="spinner-container spin">
+      <mat-spinner *ngIf="dataSource.length === 0"></mat-spinner>
+    </div>
+
     <div class="container">
       <div
         fxLayout="column"

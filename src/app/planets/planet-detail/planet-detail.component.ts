@@ -11,7 +11,6 @@ import { PlanetService } from 'src/app/services/planet.service';
 export class PlanetDetailComponent implements OnInit {
   submitted = false;
   loading = false;
-  people = [];
   dataSource: any;
   id: string = '';
   displayedColumns: string[] = ['name', 'terrain', 'population'];
